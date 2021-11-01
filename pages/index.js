@@ -145,15 +145,15 @@ export default function Home() {
 
       <footer className={styles.footer}>
         <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+          href="https://github.com/Onuiteshi/fresible"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{" "}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
+          <span className="">
+            Developed By <strong>Onuiteshi Emmanuel</strong>{" "}
           </span>
         </a>
+        <p>Credits : Football data API</p>
       </footer>
     </div>
   );
