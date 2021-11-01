@@ -10,7 +10,12 @@ import Standing from "../../components/Standing";
 import Matches from "../../components/Matches";
 
 const Index = () => {
-  let location = window.location.href;
+  let location;
+  if (typeof window !== "undefined") {
+    // browser code
+    location = window.location.href;
+  }
+
   console.log(location);
   const id = location.slice(37);
   // let id = JSON.parse(query.id);
