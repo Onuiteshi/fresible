@@ -87,7 +87,7 @@ export default function Home() {
                   <Link
                     href={{
                       pathname: "/competition",
-                      query: { id: item.id },
+                      query: { id: JSON.stringify(item.id) },
                     }}
                     key={item.id}
                     passHref

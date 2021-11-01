@@ -9,7 +9,7 @@ import { withRouter } from "next/router";
 import Standing from "../../components/Standing";
 import Matches from "../../components/Matches";
 
-const index = ({ router: { query } }) => {
+const Index = ({ router: { query } }) => {
   const id = JSON.parse(query.id);
   const [data, setData] = useState([]);
   const [matchday, setMatcday] = useState();
@@ -174,4 +174,4 @@ const index = ({ router: { query } }) => {
   );
 };
 
-export default withRouter(index);
+export default withRouter(Index);
