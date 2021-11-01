@@ -5,11 +5,11 @@ import styles from "../styles/Home.module.css";
 import Loader from "react-loader-spinner";
 import Link from "next/link";
 import axios from "axios";
+// import { withRouter } from "next/router";
 
-export default function Home() {
+function Home() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
-  const sapa = [{ phone: "iphone" }, { debts: "loans" }, { bills: "Repairs" }];
 
   useEffect(() => {
     const fetchData = () => {
@@ -87,12 +87,13 @@ export default function Home() {
                   <Link
                     href={{
                       pathname: "/competition",
-                      query: { id: JSON.stringify(item.id) },
+                      query: { id: item.id },
                     }}
                     key={item.id}
                     passHref
                   >
                     <div className="col-sm-6 mb-4">
+                      {/* {localStorage.setItem("id", item.id)} */}
                       <div
                         className={`px-4 py-4  rounded-sm ${styles.competitions}`}
                       >
@@ -158,3 +159,5 @@ export default function Home() {
     </div>
   );
 }
+
+export default Home;
