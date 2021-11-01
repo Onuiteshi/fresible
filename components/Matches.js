@@ -32,7 +32,7 @@ const Matches = (props) => {
         });
     };
     fetchData();
-  }, []);
+  });
   //   console.log(data);
   return (
     <div>

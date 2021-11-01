@@ -11,6 +11,7 @@ import Matches from "../../components/Matches";
 
 const Index = ({ router: { query } }) => {
   const id = JSON.parse(query.id);
+  localStorage.clear();
   const [data, setData] = useState([]);
   const [matchday, setMatcday] = useState();
 
@@ -37,7 +38,7 @@ const Index = ({ router: { query } }) => {
         });
     };
     fetchData();
-  }, []);
+  });
   //   console.log(data);
 
   return (
