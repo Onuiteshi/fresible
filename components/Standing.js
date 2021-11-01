@@ -11,7 +11,7 @@ const Standing = (props) => {
     const fetchData = () => {
       axios({
         method: "get",
-        url: `http://api.football-data.org/v2/competitions/${props.id}/standings`,
+        url: `https://api.football-data.org/v2/competitions/${props.id}/standings`,
         headers: {
           "Content-Type": "application/json; charset=UTF-8",
 

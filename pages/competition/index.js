@@ -27,7 +27,7 @@ const Index = ({ router }) => {
     const fetchData = () => {
       axios({
         method: "get",
-        url: `http://api.football-data.org/v2/competitions/${id}`,
+        url: `https://api.football-data.org/v2/competitions/${id}`,
         headers: {
           "Content-Type": "application/json; charset=UTF-8",
 

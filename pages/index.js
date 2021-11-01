@@ -15,7 +15,7 @@ function Home() {
     const fetchData = () => {
       axios({
         method: "get",
-        url: `http://api.football-data.org/v2/competitions`,
+        url: `https://api.football-data.org/v2/competitions`,
         headers: {
           "Content-Type": "application/json; charset=UTF-8",
 
