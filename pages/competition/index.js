@@ -5,19 +5,16 @@ import { useEffect, useState } from "react";
 import styles from "../../styles/Competition.module.css";
 import axios from "axios";
 import Link from "next/link";
-
+import { withRouter } from "next/router";
 import Standing from "../../components/Standing";
 import Matches from "../../components/Matches";
 
-const Index = () => {
-  let location;
-  if (typeof window !== "undefined") {
-    // browser code
-    location = window.location.href;
-  }
+const Index = ({ router }) => {
+  // const location = window.location.href;
 
-  console.log(location);
-  const id = location.slice(37);
+  console.log(router.query);
+  // const id = location.slice(37);
+  const id = router.query.id;
   // let id = JSON.parse(query.id);
   // const id = localStorage.getItem("id");
   // localStorage.clear();
@@ -25,6 +22,8 @@ const Index = () => {
   const [matchday, setMatcday] = useState();
 
   useEffect(() => {
+    // console.log(location);
+
     const fetchData = () => {
       axios({
         method: "get",
@@ -178,10 +177,14 @@ const Index = () => {
             Developed By <strong>Onuiteshi Emmanuel</strong>{" "}
           </span>
         </a>
-        <p>Credits : Football data API</p>
+        <a href="https://www.football-data.org/">
+          <span className="">
+            Credits : <strong>Football Data API</strong>{" "}
+          </span>
+        </a>
       </footer>
     </div>
   );
 };
 
-export default Index;
+export default withRouter(Index);

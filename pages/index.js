@@ -154,7 +154,11 @@ function Home() {
             Developed By <strong>Onuiteshi Emmanuel</strong>{" "}
           </span>
         </a>
-        <p>Credits : Football data API</p>
+        <a href="https://www.football-data.org/">
+          <span className="">
+            Credits : <strong>Football Data API</strong>{" "}
+          </span>
+        </a>
       </footer>
     </div>
   );
