@@ -1,0 +1,29 @@
+.table {
+  overflow-x: auto;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+}
+
+.header {
+  border-bottom: 1px solid #dedede;
+  display: flex;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  align-items: center;
+}
+
+.header div {
+  flex: 1;
+  margin: 5px;
+  min-width: 30px;
+  text-align: center;
+}
+
+.teamName {
+  display: flex !important;
+  align-items: center !important;
+  font-weight: 500;
+  flex: 2 !important;
+  min-width: 200px !important;
+  text-align: left !important;
+}
